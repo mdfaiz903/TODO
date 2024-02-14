@@ -10,10 +10,32 @@
                 <div class="d-grid col-12 my-2">
                     <button type="submit" class="btn btn-primary btn-lg">Add ToDo</button>
                 </div>
+                {% include './message.html' %}
             </form>
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ITEMS</th>
+                    <th scope="col" colspan="2" class="text-center" >ACTION</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td><a href="http://" class="btn btn-info" >Update</a></td>
+                        <td><a href="http://" class="btn btn-danger" >Delete</a></td>
+                      </tr>
+                </tbody>
+              </table>
+              
+       
+        </div>
+       
     </div>
 </div>
-
 {% endblock content %}
