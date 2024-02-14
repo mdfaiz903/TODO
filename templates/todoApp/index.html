@@ -24,12 +24,14 @@
                   </tr>
                 </thead>
                 <tbody>
+                    {% for item in data %}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.title}} - {{item.description}}</td>
                         <td><a href="http://" class="btn btn-info" >Update</a></td>
                         <td><a href="http://" class="btn btn-danger" >Delete</a></td>
                       </tr>
+                      {% endfor %}
                 </tbody>
               </table>
               
