@@ -3,6 +3,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        {% include './message.html' %}
         <div class="col-md-6">
             <form action="" method="post">
                 {% csrf_token %}
@@ -10,10 +11,11 @@
                 <div class="d-grid col-12 my-2">
                     <button type="submit" class="btn btn-primary btn-lg">Add ToDo</button>
                 </div>
-                {% include './message.html' %}
+              
             </form>
         </div>
         <div class="col-md-6">
+        
             <table class="table">
                 <thead class="thead-dark">
                   <tr>
@@ -28,8 +30,8 @@
                     <tr>
                         <th scope="row">{{item.id}}</th>
                         <td>{{item.title}} - {{item.description}}</td>
-                        <td><a href="http://" class="btn btn-info" >Update</a></td>
-                        <td><a href="http://" class="btn btn-danger" >Delete</a></td>
+                        <td><a href="" class="btn btn-info" >Update</a></td>
+                        <td><a href="delete-{{item.id}}" class="btn btn-danger" >Delete</a></td>
                       </tr>
                       {% endfor %}
                 </tbody>

@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from  . forms import todoForm
 from . models import todo_model
 from django .contrib import messages
@@ -23,3 +23,10 @@ def home(request):
 
 
 
+def deleteview(request,id):
+    delete_item = todo_model.objects.get(id=id)
+    if delete_item:
+        delete_item.delete()
+        messages.success(request,f"List No {id} is deleted successfully")
+        return redirect('home') 
+    # return render(request,'todoApp/delete.html')
