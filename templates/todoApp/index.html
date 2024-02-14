@@ -1,6 +1,19 @@
 {% extends "../base.html" %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<h1>Bangladesh</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{frm}}
+                <div class="d-grid col-12 my-2">
+                    <button type="submit" class="btn btn-primary btn-lg">Add ToDo</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>
 
 {% endblock content %}
