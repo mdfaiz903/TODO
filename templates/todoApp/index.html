@@ -30,7 +30,7 @@
                     <tr>
                         <th scope="row">{{item.id}}</th>
                         <td>{{item.title}} - {{item.description}}</td>
-                        <td><a href="" class="btn btn-info" >Update</a></td>
+                        <td><a href="update-{{item.id}}" class="btn btn-info" >Update</a></td>
                         <td><a href="delete-{{item.id}}" class="btn btn-danger" >Delete</a></td>
                       </tr>
                       {% endfor %}
